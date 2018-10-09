@@ -1,6 +1,7 @@
 const express = require('express')
 const hbs = require('hbs')
 var app = express()
+const port = process.env.PORT || 3000;
 
 
 //middleware
@@ -36,6 +37,6 @@ app.get('/contact',(req,res)=>{
     })
 })
 
-app.listen(3000,() =>{
-    console.log('Listening on PORT 3000')
+app.listen(port,() =>{
+    console.log(`Listening on PORT ${port}`)
 })
